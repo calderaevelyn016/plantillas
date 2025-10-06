@@ -4,7 +4,21 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    arr =["Luis", "Paco","Rosita", "Martin", "Elsa"]
+    autor = "Evelyn Fernanda Caldera Gallegos"
+    return render_template("index.html", nombre = autor, amigos = arr)
+    
+@app.route("/1")
+def p1():
+    arr =["Daniela", "Leonardo", "Loretto","Luis"]
+    autor = "Evelyn Fernanda Caldera Gallegos"
+    return render_template("p1.html", nombre = autor, amigos = arr)
+
+@app.route("/1")
+def p2():
+    arr =["1", "2", "3","4"]
+    autor = "Evelyn Fernanda Caldera Gallegos"
+    return render_template("p2.html", nombre = autor, num = arr)
 
 if __name__ == "__main__":
     app.run(debug=True)
