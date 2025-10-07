@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Plantillas</title>
 </head>
 <body>
-    
+    <h1>ejemplo 1 plantilla</h1>
+    <ol>
+{%for amigo in amigos%}
+        <li>{{amigo}}</li>
+        {%endfor%}
+    </ol>
+    <h4>Creado por {{nombre}}</h4>
 </body>
 </html>
